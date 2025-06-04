@@ -232,7 +232,7 @@ export default function Dashboard() {
                     >
                       <DialogTrigger asChild>
                         <Button className="h-8 w-8 p-0 text-slate-500 hover:text-blue-600">
-                          <Edit2 className="h-4 w-4" />
+                          <Edit2 className="h-4 w-4 text-gray-50" />
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="sm:max-w-md">
@@ -246,9 +246,9 @@ export default function Dashboard() {
                             onKeyPress={(e: { key: string }) => e.key === "Enter" && handleUpdateCategory()}
                           />
                           <div className="flex justify-end gap-2">
-                            <Button className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" onClick={() => setEditingCategory(null)}>
+                            <button className="bg-gray-50 border p-2 border-2 rounded-md border-red-400 text-slate-700 hover:bg-red-400 hover:text-gray-50" onClick={() => setEditingCategory(null)}>
                               キャンセル
-                            </Button>
+                            </button>
                             <Button onClick={handleUpdateCategory} className="bg-blue-600 hover:bg-blue-700">
                               更新
                             </Button>
@@ -302,10 +302,10 @@ export default function Dashboard() {
                     </span>
                   </div>
 
-                  <Link href={`/category/${category.id}`}>
-                    <Button className="w-full mt-4 border-slate-200 hover:bg-slate-50">
+                  <Link href={`/items/${category.id}`}>
+                    <button className="w-full mt-4 rounded-md text-gray-50 bg-sky-500 py-2 px-4 border-slate-200 hover:bg-sky-400">
                       メモを見る
-                    </Button>
+                    </button>
                   </Link>
                 </div>
               </CardContent>

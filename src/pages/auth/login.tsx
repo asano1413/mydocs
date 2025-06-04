@@ -27,7 +27,7 @@ export default function LoginPage() {
                     <link rel="icon" href="/favicon.svg" />
                </Head>
                <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50">
-                    <h1 className='mb-12 text-4xl text-blue-800'>project_name</h1>
+                    <h1 className='mb-12 text-4xl text-blue-800'>MY DOCS</h1>
                     <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
                          <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">ログイン</h2>
                          <input
