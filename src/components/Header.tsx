@@ -54,6 +54,12 @@ export default function Header() {
                   <LogOut className="h-4 w-4 mr-2" />
                   ログアウト
                 </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href="/profile" className="flex items-center gap-2">
+                    <UserIcon className="h-4 w-4 mr-2" />
+                    プロフィール
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           )}

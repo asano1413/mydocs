@@ -273,7 +273,7 @@ export default function ItemPage() {
                                         <input
                                              type="text"
                                              placeholder="メモを検索..."
-                                             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                             className="w-full pl-10 text-gray-700 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                                              value={searchQuery}
                                              onChange={(e) => setSearchQuery(e.target.value)}
                                         />
@@ -282,7 +282,7 @@ export default function ItemPage() {
 
                                    <div className="flex items-center gap-2">
                                         <select
-                                             className="border border-gray-300 rounded-md px-3 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                             className="border border-gray-300 rounded-md px-3 py-2 text-gray-700 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                              value={sortKey}
                                              onChange={(e) => setSortKey(e.target.value as "created_at" | "title")}
                                         >
@@ -336,7 +336,7 @@ export default function ItemPage() {
                                         <input
                                              type="text"
                                              placeholder="タイトルを入力"
-                                             className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                             className="w-full p-2 text-gray-600 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                              value={newMemo.title}
                                              onChange={(e) => setNewMemo({ ...newMemo, title: e.target.value })}
                                         />
@@ -377,7 +377,7 @@ export default function ItemPage() {
                                         <input
                                              type="url"
                                              placeholder="https://..."
-                                             className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                             className="w-full p-2 text-gray-600 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                              value={newMemo.reference_url}
                                              onChange={(e) => setNewMemo({ ...newMemo, reference_url: e.target.value })}
                                         />
@@ -388,7 +388,7 @@ export default function ItemPage() {
                                         <input
                                              type="text"
                                              placeholder="タグ1, タグ2, タグ3"
-                                             className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                             className="w-full p-2 text-gray-600 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                              value={newTags}
                                              onChange={(e) => setNewTags(e.target.value)}
                                         />
@@ -466,7 +466,7 @@ export default function ItemPage() {
                                                                  <label className="block text-sm font-medium text-gray-700 mb-1">タイトル</label>
                                                                  <input
                                                                       type="text"
-                                                                      className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                                                      className="w-full p-2 text-gray-700 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                                                       value={editMemo.title}
                                                                       onChange={(e) => setEditMemo({ ...editMemo, title: e.target.value })}
                                                                  />
@@ -478,7 +478,7 @@ export default function ItemPage() {
                                                                       value={editMemo.usage}
                                                                       onChange={(val = "") => setEditMemo({ ...editMemo, usage: val })}
                                                                       preview="edit"
-                                                                      className="border border-gray-300 rounded-md overflow-hidden"
+                                                                      className="text-gray-700 border border-gray-300 rounded-md overflow-hidden"
                                                                  />
                                                             </div>
 
@@ -488,7 +488,7 @@ export default function ItemPage() {
                                                                       value={editMemo.example}
                                                                       onChange={(val = "") => setEditMemo({ ...editMemo, example: val })}
                                                                       preview="edit"
-                                                                      className="border border-gray-300 rounded-md overflow-hidden"
+                                                                      className="text-gray-700 border border-gray-300 rounded-md overflow-hidden"
                                                                  />
                                                             </div>
 
@@ -498,7 +498,7 @@ export default function ItemPage() {
                                                                       value={editMemo.application}
                                                                       onChange={(val = "") => setEditMemo({ ...editMemo, application: val })}
                                                                       preview="edit"
-                                                                      className="border border-gray-300 rounded-md overflow-hidden"
+                                                                      className="text-gray-700border border-gray-300 rounded-md overflow-hidden"
                                                                  />
                                                             </div>
 
@@ -506,7 +506,7 @@ export default function ItemPage() {
                                                                  <label className="block text-sm font-medium text-gray-700 mb-1">参考URL</label>
                                                                  <input
                                                                       type="url"
-                                                                      className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                                                      className="w-full p-2 text-gray-700 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                                                       placeholder="https://..."
                                                                       value={editMemo.reference_url}
                                                                       onChange={(e) => setEditMemo({ ...editMemo, reference_url: e.target.value })}
@@ -530,21 +530,21 @@ export default function ItemPage() {
                                                        </div>
                                                   ) : (
                                                        <div className="space-y-6 pt-4">
-                                                            <div className="prose prose-blue max-w-none">
+                                                            <div className="prose text-gray-700 prose-blue max-w-none">
                                                                  <h4 className="text-sm font-medium text-gray-500 mb-2">使い方</h4>
                                                                  <div className="bg-gray-50 p-4 rounded-md">
                                                                       <ReactMarkdown components={markdownRenderers}>{memo.usage || "内容なし"}</ReactMarkdown>
                                                                  </div>
                                                             </div>
 
-                                                            <div className="prose prose-blue max-w-none">
+                                                            <div className="prose text-gray-700 prose-blue max-w-none">
                                                                  <h4 className="text-sm font-medium text-gray-500 mb-2">使用例</h4>
                                                                  <div className="bg-gray-50 p-4 rounded-md">
                                                                       <ReactMarkdown components={markdownRenderers}>{memo.example || "内容なし"}</ReactMarkdown>
                                                                  </div>
                                                             </div>
 
-                                                            <div className="prose prose-blue max-w-none">
+                                                            <div className="prose text-gray-700 prose-blue max-w-none">
                                                                  <h4 className="text-sm font-medium text-gray-500 mb-2">応用例</h4>
                                                                  <div className="bg-gray-50 p-4 rounded-md">
                                                                       <ReactMarkdown components={markdownRenderers}>

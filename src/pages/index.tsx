@@ -231,7 +231,7 @@ export default function Dashboard() {
                       }}
                     >
                       <DialogTrigger asChild>
-                        <Button className="h-8 w-8 p-0 text-slate-500 hover:text-blue-600">
+                        <Button variant="icon" className="hover:text-blue-600">
                           <Edit2 className="h-4 w-4 text-gray-50" />
                         </Button>
                       </DialogTrigger>
@@ -264,7 +264,7 @@ export default function Dashboard() {
                       }}
                     >
                       <Button
-                        className="h-8 w-8 p-0 text-slate-500 hover:text-red-600"
+                        variant="danger"
                         onClick={() => setDeletingCategory(category)}
                       >
                         <Trash2 className="h-4 w-4" />
